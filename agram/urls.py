@@ -24,9 +24,8 @@ Sitemap: https://agram-production.up.railway.app/sitemap.xml
 def sitemap_xml(request):
     response = sitemap_views.sitemap(request, {"sitemaps": sitemaps})
     response["Content-Type"] = "application/xml"
-    # شيل الـ x-robots-tag لو بيتضاف تلقائيًا
-    if "X-Robots-Tag" in response:
-        del response["X-Robots-Tag"]
+    # غيّر الـ X-Robots-Tag عشان يسمح بالفهرسة
+    response["X-Robots-Tag"] = "all"
     return response
 
 favicon_view = RedirectView.as_view(
