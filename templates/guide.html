@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="/static/favicon.svg"><link rel="apple-touch-icon" href="/static/favicon.svg"><title>دليل الاستخدام | agram</title>
+<meta name="description" content="دليل كامل لاستخدام agram لتحميل فيديوهات انستجرام - شرح البحث، تحميل الريلز، الستوري، والهايلايت خطوة بخطوة.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7c3aed">
+<link rel="canonical" href="https://agram.example/guide">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a1a;--surface:#151530;--card:#1c1c42;--border:#2d2d5f;--text:#eef0ff;--muted:#9090c0;--primary:#7c3aed;--primary2:#a78bfa;--secondary:#3b82f6;--accent:#ec4899;--success:#10b981;--warning:#f59e0b;--grad1:linear-gradient(135deg,#7c3aed,#3b82f6);--grad2:linear-gradient(135deg,#ec4899,#7c3aed);--grad3:linear-gradient(135deg,#3b82f6,#06b6d4);--grad4:linear-gradient(135deg,#10b981,#3b82f6)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;min-height:100vh}
+.bg-blobs{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.25;animation:float 25s ease-in-out infinite}
+.blob.b1{width:500px;height:500px;background:#7c3aed;top:-100px;right:-100px}
+.blob.b2{width:450px;height:450px;background:#3b82f6;bottom:-100px;left:-100px;animation-delay:-8s;opacity:.15}
+.blob.b3{width:350px;height:350px;background:#ec4899;top:40%;left:30%;animation-delay:-16s;opacity:.1}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.1)}66%{transform:translate(-30px,40px) scale(.95)}}
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(12px,3vw,32px);background:rgba(10,10,26,.7);backdrop-filter:blur(20px);border-bottom:1px solid rgba(124,58,237,.2);width:100%}
+.brand{display:flex;align-items:center;gap:14px;font-weight:900;font-size:clamp(1.4rem,3vw,2rem);text-decoration:none;flex-shrink:0}
+.brand .dot{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 0deg,#7c3aed,#3b82f6,#ec4899,#a78bfa,#7c3aed);animation:spin 4s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.brand b{background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.nav-links{display:flex;align-items:center;gap:clamp(6px,1.2vw,16px);flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:clamp(.7rem,1.1vw,.9rem);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--primary2)}
+.nav-links .nav-btn{padding:7px 14px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.nav-links .nav-btn:hover{border-color:var(--primary);color:var(--primary2)}
+.ara-logo{position:relative;display:flex;align-items:center;gap:14px;font-family:'Space Grotesk',monospace;font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);padding:14px 30px;border-radius:18px;background:rgba(20,20,50,.7);border:1px solid rgba(255,255,255,.1);overflow:hidden;text-decoration:none;flex-shrink:0}
+.ara-logo::before{content:'';position:absolute;inset:-2px;border-radius:18px;background:conic-gradient(from 0deg,#7c3aed,#3b82f6,#ec4899,#10b981,#f59e0b,#a78bfa,#7c3aed);z-index:-1;filter:blur(12px);opacity:.7;animation:spin 5s linear infinite}
+.ara-logo .ara-text{background:linear-gradient(90deg,#a78bfa,#60a5fa,#ec4899,#10b981,#f59e0b,#a78bfa);background-size:400% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:flow 4s linear infinite;letter-spacing:4px}
+@keyframes flow{to{background-position:400% 0}}
+.ara-logo .ara-badge{font-size:.85rem;padding:4px 11px;border-radius:9px;background:var(--grad1);color:#fff;font-weight:700}
+main{position:relative;z-index:1;padding-top:80px;width:100%;max-width:100%}
+.page-hero{text-align:center;padding:clamp(40px,8vh,80px) clamp(16px,4vw,20px) 40px}
+.page-hero h1{font-size:clamp(2rem,6vw,4rem);font-weight:900;margin-bottom:16px}
+.page-hero h1 .g{background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.page-hero p{color:var(--muted);font-size:clamp(1rem,2vw,1.15rem);max-width:600px;margin:0 auto;line-height:1.7}
+.page-content{max-width:800px;margin:0 auto;padding:0 clamp(16px,3vw,20px) clamp(40px,6vh,80px)}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:clamp(20px,3vw,28px);margin-bottom:30px}
+.toc h3{font-size:clamp(1.1rem,2vw,1.2rem);margin-bottom:16px}
+.toc ul{list-style:none;padding:0}
+.toc ul li{padding:8px 0}
+.toc ul li a{color:var(--muted);text-decoration:none;transition:color .2s;font-size:clamp(.85rem,1.4vw,.95rem)}
+.toc ul li a:hover{color:var(--primary2)}
+.toc ul li a::before{content:'← ';color:var(--primary)}
+.content-section{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:clamp(20px,3vw,28px);margin-bottom:20px;opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.content-section.visible{opacity:1;transform:translateY(0)}
+.content-section h2{font-size:clamp(1.2rem,2.5vw,1.5rem);margin-bottom:16px;color:var(--primary2)}
+.content-section h3{font-size:clamp(1rem,1.8vw,1.15rem);margin:16px 0 8px;color:var(--text)}
+.content-section p{color:var(--muted);line-height:1.8;margin-bottom:12px;font-size:clamp(.85rem,1.4vw,.95rem)}
+.content-section ol,.content-section ul{padding-right:20px;margin-bottom:12px}
+.content-section li{color:var(--muted);line-height:1.8;margin-bottom:8px;font-size:clamp(.85rem,1.4vw,.95rem)}
+.content-section .step{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin:12px 0}
+.content-section .step b{color:var(--primary2)}
+.content-section code{background:var(--card);padding:2px 8px;border-radius:6px;font-family:'Space Grotesk',monospace;font-size:.85rem;color:var(--primary2)}
+footer{text-align:center;padding:clamp(30px,5vh,50px) clamp(16px,3vw,20px) 0;color:var(--muted);border-top:1px solid var(--border);position:relative;z-index:1;width:100%}
+footer b{background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+footer .footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+footer .footer-links a{color:var(--muted);text-decoration:none;font-size:clamp(.8rem,1.2vw,.9rem);transition:color .2s}
+footer .footer-links a:hover{color:var(--primary2)}
+@media(max-width:600px){header{padding:10px 14px}.brand{gap:8px}.nav-links{gap:6px}.nav-links .nav-btn{padding:5px 10px;font-size:.7rem}.ara-logo{padding:8px 18px;gap:10px;font-size:1.4rem}.ara-logo .ara-badge{font-size:.7rem;padding:3px 8px}}
+</style>
+</head>
+<body>
+<div class="bg-blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<header>
+  <a href="/" class="brand"><span class="dot"></span><b>agram</b></a>
+  <nav class="nav-links">
+    <a href="/" class="nav-btn">الرئيسية</a>
+    <a href="/guide" class="nav-btn">دليل الاستخدام</a>
+    <a href="/about" class="nav-btn">من نحن</a>
+    <a href="/contact" class="nav-btn">تواصل معنا</a>
+    <a href="/" class="ara-logo"><span class="ara-text">AŘA</span><span class="ara-badge">DL</span></a>
+  </nav>
+</header>
+<main>
+<section class="page-hero"><h1>دليل <span class="g">الاستخدام</span></h1><p>كل اللي محتاج تعرفه عشان تستخدم agram وتحمّل من انستجرام بسهولة</p></section>
+<section class="page-content">
+  <div class="toc"><h3>المحتويات</h3><ul>
+    <li><a href="#start">البداية السريعة</a></li>
+    <li><a href="#username">البحث باسم المستخدم</a></li>
+    <li><a href="#url">التحميل برابط المنشور</a></li>
+    <li><a href="#reels">تحميل الريلز</a></li>
+    <li><a href="#stories">تحميل الستوري</a></li>
+    <li><a href="#highlights">تحميل الهايلايت</a></li>
+    <li><a href="#quality">جودة التحميل</a></li>
+    <li><a href="#apis">نظام الـ APIs</a></li>
+  </ul></div>
+  <div class="content-section" id="start"><h2>البداية السريعة</h2><p>agram أداة بسيطة جداً. كل اللي محتاجه: اسم مستخدم انستجرام أو رابط منشور/ريلز. حطه في شريط البحث في الصفحة الرئيسية واضغط بحث.</p></div>
+  <div class="content-section" id="username"><h2>البحث باسم المستخدم</h2><ol><li>اكتب اسم المستخدم في شريط البحث (مثال: <code>cristiano</code>)</li><li>اضغط زر "بحث"</li><li>هتظهر بطاقة البروفايل تحت البحث مباشرة فيها الصورة، الاسم، عدد المتابعين والمنشورات</li><li>تحت البروفايل هتلاقي تبويبات: منشورات، ريلز، ستوري، هايلايت</li><li>اضغط على أي تبويب عشان تشوف المحتوى</li></ol></div>
+  <div class="content-section" id="url"><h2>التحميل برابط المنشور</h2><ol><li>افتح انستجرام وروح للمنشور أو الريلز اللي عايز تحمله</li><li>اضغط على الثلاث نقاط واختر "نسخ الرابط"</li><li>ارجع لـ agram والصق الرابط في شريط البحث</li><li>اضغط "بحث" وهيظهر المحتوى جاهز للتحميل</li></ol></div>
+  <div class="content-section" id="reels"><h2>تحميل الريلز</h2><p>تقدر تحمل الريلز بطريقتين:</p><div class="step"><b>الطريقة الأولى:</b> ابحث باسم المستخدم → افتح تبويب "ريلز" → حمّل اللي عايزه</div><div class="step"><b>الطريقة الثانية:</b> انسخ رابط الريلز من انستجرام → الصقه في البحث → حمّل</div></div>
+  <div class="content-section" id="stories"><h2>تحميل الستوري</h2><p>الستوري بتكون متاحة لمدة 24 ساعة فقط. عشان تحملها:</p><ol><li>ابحث باسم المستخدم</li><li>افتح تبويب "ستوري"</li><li>لو فيه ستوري نشطة دلوقتي، هتظهر</li><li>اضغط على أي ستوري عشان تشوفها أو تحملها</li></ol></div>
+  <div class="content-section" id="highlights"><h2>تحميل الهايلايت</h2><p>الهايلايت هي مجموعات الستوري المحفوظة في البروفايل. تقدر تحمل كل الفيديوهات والصور جواها.</p><ol><li>ابحث باسم المستخدم</li><li>افتح تبويب "هايلايت"</li><li>هتلاقي كل محتوى الهايلايت متاح للتحميل</li></ol></div>
+  <div class="content-section" id="quality"><h2>جودة التحميل</h2><p>agram بيحمل أعلى جودة متاحة من انستجرام:</p><ul><li>الفيديوهات: جودة 1080p حسب المتاح</li><li>الصور: جودة Full HD</li><li>كل المحتوى بدون علامة مائية</li></ul></div>
+  <div class="content-section" id="apis"><h2>نظام الـ APIs الاحتياطي</h2><p>agram بيستخدم 6 APIs مختلفة عشان يضمن إن الخدمة تفضل متاحة دايماً. لو API خلص ليميته أو مش شغال، النظام بيتنقل تلقائياً للتالي. ده بيخلي الموقع متاح 24/7.</p></div>
+</section>
+</main>
+<footer>
+  <div class="footer-links"><a href="/">الرئيسية</a><a href="/about">من نحن</a><a href="/contact">تواصل معنا</a><a href="/privacy">سياسة الخصوصية</a><a href="/terms">الشروط والأحكام</a><a href="/faq">الأسئلة الشائعة</a></div>
+  <p>صُنع بكل احتراف · <b>agram</b> × <span style="font-family:'Space Grotesk',monospace">AŘA_downloader</span></p>
+</footer>
+<script>
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.15});
+document.querySelectorAll('.content-section').forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>

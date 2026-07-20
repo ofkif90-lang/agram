@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="/static/favicon.svg"><link rel="apple-touch-icon" href="/static/favicon.svg"><title>الشروط والأحكام | agram</title>
+<meta name="description" content="الشروط والأحكام لاستخدام agram - أداة تحميل فيديوهات انستجرام مجانا.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7c3aed">
+<link rel="canonical" href="https://agram.example/terms">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a1a;--surface:#151530;--card:#1c1c42;--border:#2d2d5f;--text:#eef0ff;--muted:#9090c0;--primary:#7c3aed;--primary2:#a78bfa;--secondary:#3b82f6;--accent:#ec4899;--success:#10b981;--warning:#f59e0b;--grad1:linear-gradient(135deg,#7c3aed,#3b82f6);--grad2:linear-gradient(135deg,#ec4899,#7c3aed);--grad3:linear-gradient(135deg,#3b82f6,#06b6d4);--grad4:linear-gradient(135deg,#10b981,#3b82f6)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;min-height:100vh}
+.bg-blobs{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.25;animation:float 25s ease-in-out infinite}
+.blob.b1{width:500px;height:500px;background:#7c3aed;top:-100px;right:-100px}
+.blob.b2{width:450px;height:450px;background:#3b82f6;bottom:-100px;left:-100px;animation-delay:-8s;opacity:.15}
+.blob.b3{width:350px;height:350px;background:#ec4899;top:40%;left:30%;animation-delay:-16s;opacity:.1}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.1)}66%{transform:translate(-30px,40px) scale(.95)}}
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(12px,3vw,32px);background:rgba(10,10,26,.7);backdrop-filter:blur(20px);border-bottom:1px solid rgba(124,58,237,.2);width:100%}
+.brand{display:flex;align-items:center;gap:14px;font-weight:900;font-size:clamp(1.4rem,3vw,2rem);text-decoration:none;flex-shrink:0}
+.brand .dot{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 0deg,#7c3aed,#3b82f6,#ec4899,#a78bfa,#7c3aed);animation:spin 4s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.brand b{background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.nav-links{display:flex;align-items:center;gap:clamp(6px,1.2vw,16px);flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:clamp(.7rem,1.1vw,.9rem);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--primary2)}
+.nav-links .nav-btn{padding:7px 14px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.nav-links .nav-btn:hover{border-color:var(--primary);color:var(--primary2)}
+.ara-logo{position:relative;display:flex;align-items:center;gap:14px;font-family:'Space Grotesk',monospace;font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);padding:14px 30px;border-radius:18px;background:rgba(20,20,50,.7);border:1px solid rgba(255,255,255,.1);overflow:hidden;text-decoration:none;flex-shrink:0}
+.ara-logo::before{content:'';position:absolute;inset:-2px;border-radius:18px;background:conic-gradient(from 0deg,#7c3aed,#3b82f6,#ec4899,#10b981,#f59e0b,#a78bfa,#7c3aed);z-index:-1;filter:blur(12px);opacity:.7;animation:spin 5s linear infinite}
+.ara-logo .ara-text{background:linear-gradient(90deg,#a78bfa,#60a5fa,#ec4899,#10b981,#f59e0b,#a78bfa);background-size:400% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:flow 4s linear infinite;letter-spacing:4px}
+@keyframes flow{to{background-position:400% 0}}
+.ara-logo .ara-badge{font-size:.85rem;padding:4px 11px;border-radius:9px;background:var(--grad1);color:#fff;font-weight:700}
+main{position:relative;z-index:1;padding-top:80px;width:100%;max-width:100%}
+.page-hero{text-align:center;padding:clamp(40px,8vh,80px) clamp(16px,4vw,20px) 40px}
+.page-hero h1{font-size:clamp(2rem,6vw,4rem);font-weight:900;margin-bottom:16px}
+.page-hero h1 .g{background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.page-hero p{color:var(--muted);font-size:clamp(1rem,2vw,1.15rem);max-width:600px;margin:0 auto;line-height:1.7}
+.page-content{max-width:800px;margin:0 auto;padding:0 clamp(16px,3vw,20px) clamp(40px,6vh,80px)}
+.content-section{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:clamp(20px,3vw,28px);margin-bottom:20px;opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.content-section.visible{opacity:1;transform:translateY(0)}
+.content-section h2{font-size:clamp(1.2rem,2.5vw,1.5rem);margin-bottom:16px;color:var(--primary2)}
+.content-section p{color:var(--muted);line-height:1.8;margin-bottom:12px;font-size:clamp(.85rem,1.4vw,.95rem)}
+.content-section ul{padding-right:20px;margin-bottom:12px}
+.content-section li{color:var(--muted);line-height:1.8;margin-bottom:8px;font-size:clamp(.85rem,1.4vw,.95rem)}
+.content-section .update-date{color:var(--primary2);font-size:.85rem;margin-bottom:16px}
+footer{text-align:center;padding:clamp(30px,5vh,50px) clamp(16px,3vw,20px) 0;color:var(--muted);border-top:1px solid var(--border);position:relative;z-index:1;width:100%}
+footer b{background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+footer .footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+footer .footer-links a{color:var(--muted);text-decoration:none;font-size:clamp(.8rem,1.2vw,.9rem);transition:color .2s}
+footer .footer-links a:hover{color:var(--primary2)}
+@media(max-width:600px){header{padding:10px 14px}.brand{gap:8px}.nav-links{gap:6px}.nav-links .nav-btn{padding:5px 10px;font-size:.7rem}.ara-logo{padding:8px 18px;gap:10px;font-size:1.4rem}.ara-logo .ara-badge{font-size:.7rem;padding:3px 8px}}
+</style>
+</head>
+<body>
+<div class="bg-blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<header>
+  <a href="/" class="brand"><span class="dot"></span><b>agram</b></a>
+  <nav class="nav-links">
+    <a href="/" class="nav-btn">الرئيسية</a>
+    <a href="/guide" class="nav-btn">دليل الاستخدام</a>
+    <a href="/about" class="nav-btn">من نحن</a>
+    <a href="/contact" class="nav-btn">تواصل معنا</a>
+    <a href="/" class="ara-logo"><span class="ara-text">AŘA</span><span class="ara-badge">DL</span></a>
+  </nav>
+</header>
+<main>
+<section class="page-hero"><h1>الشروط <span class="g">والأحكام</span></h1><p>الشروط اللي بتحكم استخدامك لـ agram</p></section>
+<section class="page-content">
+  <div class="content-section"><div class="update-date">آخر تحديث: يوليو 2025</div>
+    <h2>قبول الشروط</h2><p>باستخدامك لـ agram، إنت بتوافق على الشروط والأحكام دي. لو مش موافق على أي حاجة فيها، ممنوعش تستخدم الخدمة.</p>
+  </div>
+  <div class="content-section"><h2>الاستخدام المسموح</h2><p>agram أداة لتحميل المحتوى العام من انستجرام للاستخدام الشخصي. الاستخدام المسموح يشمل:</p>
+    <ul>
+      <li>تحميل المحتوى للاستخدام الشخصي</li>
+      <li>حفظ الفيديوهات والصور للعرض لاحقاً</li>
+      <li>تحميل محتوى أنت صاحبه</li>
+    </ul>
+  </div>
+  <div class="content-section"><h2>الاستخدام الممنوع</h2><p>الاستخدامات التالية ممنوعة:</p>
+    <ul>
+      <li>إعادة توزيع المحتوى بدون إذن صاحبه</li>
+      <li>استخدام المحتوى لأغراض تجارية بدون ترخيص</li>
+      <li>تحميل محتوى من حسابات خاصة بدون إذن</li>
+      <li>استخدام الخدمة لأي غرض غير قانوني</li>
+      <li>محاولة اختراق أو إساءة استخدام السيرفر</li>
+    </ul>
+  </div>
+  <div class="content-section"><h2>حقوق الملكية الفكرية</h2><p>المحتوى المحمّل من خلال agram ملك لأصحابه الأصليين. agram ما بيملكش أي حقوق على المحتوى. المسؤولية عن استخدام المحتوى تقع على المستخدم بالكامل.</p></div>
+  <div class="content-section"><h2>توفر الخدمة</h2><p>agram بيستخدم 6 APIs احتياطية لضمان توفر الخدمة 24/7. بس ممكن الخدمة تتعطل بسبب ظروف خارجة عن إرادتنا (مشاكل في RapidAPI، انستجرام، أو السيرفر). ما بنضمنش توفر الخدمة 100% من الوقت.</p></div>
+  <div class="content-section"><h2>حد المسؤولية</h2><p>agram خدمة مجانية بتقدم "كما هي" بدون أي ضمانات. ما بنتحملش مسؤولية أي أضرار مباشرة أو غير مباشرة ناتجة عن استخدام الخدمة.</p></div>
+  <div class="content-section"><h2>التعديلات</h2><p>نحتفظ بحق تعديل الشروط دي في أي وقت. التعديلات بتدخل حيز التنفيذ فور نشرها على الصفحة دي.</p></div>
+  <div class="content-section"><h2>التواصل</h2><p>لو عندك أي سؤال عن الشروط، تقدر تتواصل معنا من <a href="/contact" style="color:var(--primary2)">صفحة التواصل</a>.</p></div>
+</section>
+</main>
+<footer>
+  <div class="footer-links"><a href="/">الرئيسية</a><a href="/about">من نحن</a><a href="/contact">تواصل معنا</a><a href="/privacy">سياسة الخصوصية</a><a href="/terms">الشروط والأحكام</a><a href="/faq">الأسئلة الشائعة</a></div>
+  <p>صُنع بكل احتراف · <b>agram</b> × <span style="font-family:'Space Grotesk',monospace">AŘA_downloader</span></p>
+</footer>
+<script>
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.15});
+document.querySelectorAll('.content-section').forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>

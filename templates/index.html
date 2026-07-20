@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="/static/favicon.svg"><link rel="apple-touch-icon" href="/static/favicon.svg"><title>agram | تحميل فيديوهات انستجرام مجانا - ريلز وستوري وهايلايت بدون علامة مائية</title>
+<meta name="description" content="agram أداة مجانية لتحميل فيديوهات انستجرام بدقة عالية - ريلز، ستوري، هايلايت، ومنشورات بدون علامة مائية وبسرعة فائقة.">
+<meta name="keywords" content="تحميل انستجرام, تنزيل فيديوهات انستجرام, instagram downloader, تحميل ريلز, تحميل ستوري, تحميل هايلايت, agram, igram, تنزيل انستجرام مجانا">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7c3aed">
+<link rel="canonical" href="https://agram.example/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="agram | تحميل فيديوهات انستجرام مجانا">
+<meta property="og:description" content="تحميل ريلز وستوري وهايلايت انستجرام بدون علامة مائية - مجاني وسريع">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:image" content="/static/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a1a;--surface:#151530;--card:#1c1c42;--border:#2d2d5f;--text:#eef0ff;--muted:#9090c0;--primary:#7c3aed;--primary2:#a78bfa;--secondary:#3b82f6;--accent:#ec4899;--success:#10b981;--warning:#f59e0b;--grad1:linear-gradient(135deg,#7c3aed,#3b82f6);--grad2:linear-gradient(135deg,#ec4899,#7c3aed);--grad3:linear-gradient(135deg,#3b82f6,#06b6d4);--grad4:linear-gradient(135deg,#10b981,#3b82f6);--grad5:linear-gradient(135deg,#f59e0b,#ec4899);--grad6:linear-gradient(135deg,#06b6d4,#7c3aed)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;min-height:100vh}
+.bg-blobs{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.25;animation:float 25s ease-in-out infinite}
+.blob.b1{width:500px;height:500px;background:#7c3aed;top:-100px;right:-100px}
+.blob.b2{width:450px;height:450px;background:#3b82f6;bottom:-100px;left:-100px;animation-delay:-8s;opacity:.15}
+.blob.b3{width:350px;height:350px;background:#ec4899;top:40%;left:30%;animation-delay:-16s;opacity:.1}
+.blob.b4{width:300px;height:300px;background:#10b981;top:60%;right:20%;animation-delay:-12s;opacity:.1}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.1)}66%{transform:translate(-30px,40px) scale(.95)}}
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(12px,3vw,32px);background:rgba(10,10,26,.7);backdrop-filter:blur(20px);border-bottom:1px solid rgba(124,58,237,.2);width:100%}
+.brand{display:flex;align-items:center;gap:14px;font-weight:900;font-size:clamp(1.4rem,3vw,2rem);text-decoration:none;flex-shrink:0}
+.brand .dot{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 0deg,#7c3aed,#3b82f6,#ec4899,#a78bfa,#7c3aed);animation:spin 4s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.brand b{background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.nav-links{display:flex;align-items:center;gap:clamp(6px,1.2vw,16px);flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:clamp(.7rem,1.1vw,.9rem);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--primary2)}
+.nav-links .nav-btn{padding:7px 14px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.nav-links .nav-btn:hover{border-color:var(--primary);color:var(--primary2)}
+.ara-logo{position:relative;display:flex;align-items:center;gap:14px;font-family:'Space Grotesk',monospace;font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);padding:14px 30px;border-radius:18px;background:rgba(20,20,50,.7);border:1px solid rgba(255,255,255,.1);overflow:hidden;text-decoration:none;flex-shrink:0}
+.ara-logo::before{content:'';position:absolute;inset:-2px;border-radius:18px;background:conic-gradient(from 0deg,#7c3aed,#3b82f6,#ec4899,#10b981,#f59e0b,#a78bfa,#7c3aed);z-index:-1;filter:blur(12px);opacity:.7;animation:spin 5s linear infinite}
+.ara-logo .ara-text{background:linear-gradient(90deg,#a78bfa,#60a5fa,#ec4899,#10b981,#f59e0b,#a78bfa);background-size:400% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:flow 4s linear infinite;letter-spacing:4px}
+@keyframes flow{to{background-position:400% 0}}
+.ara-logo .ara-badge{font-size:.85rem;padding:4px 11px;border-radius:9px;background:var(--grad1);color:#fff;font-weight:700}
+main{position:relative;z-index:1;padding-top:80px;width:100%;max-width:100%}
+.hero{text-align:center;padding:clamp(40px,8vh,80px) clamp(16px,3vw,20px) 30px}
+.hero h1{font-size:clamp(2rem,6vw,4rem);font-weight:900;margin-bottom:16px;line-height:1.2}
+.hero h1 .g{background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:clamp(1rem,2vw,1.2rem);max-width:600px;margin:0 auto 30px;line-height:1.7}
+.search-box{max-width:650px;margin:0 auto;display:flex;gap:10px;padding:8px;border-radius:18px;background:var(--surface);border:1px solid var(--border);transition:border-color .3s,box-shadow .3s,opacity .3s}
+.search-box:focus-within{border-color:var(--primary);box-shadow:0 0 0 4px rgba(124,58,237,.15)}
+.search-box.loading{opacity:.7;pointer-events:none}
+.search-box input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:inherit;font-size:clamp(.95rem,1.5vw,1.1rem);padding:14px 18px;min-width:0}
+.search-box input::placeholder{color:var(--muted)}
+.search-box input:disabled{color:var(--muted)}
+.search-box button{padding:14px 28px;border-radius:12px;background:var(--grad1);color:#fff;border:none;font-family:inherit;font-weight:700;font-size:clamp(.9rem,1.3vw,1rem);cursor:pointer;transition:transform .2s,box-shadow .2s,opacity .2s;white-space:nowrap;flex-shrink:0;min-width:90px}
+.search-box button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.4)}
+.search-box button:active:not(:disabled){transform:translateY(0)}
+.search-box button:disabled{opacity:.6;cursor:not-allowed}
+.search-box button .btn-text{display:inline}
+.search-box button .btn-spinner{display:none;width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto}
+.search-box button.loading .btn-text{display:none}
+.search-box button.loading .btn-spinner{display:inline-block}
+.search-hint{text-align:center;color:var(--muted);font-size:.8rem;margin-top:12px}
+#resultsSection{max-width:1100px;margin:30px auto 0;padding:0 clamp(16px,3vw,20px);display:none}
+#resultsSection.show{display:block;animation:fadeUp .5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.profile-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;margin-bottom:24px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.profile-card img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid var(--primary);flex-shrink:0}
+.profile-info{flex:1;min-width:200px}
+.profile-info h3{font-size:clamp(1.2rem,2.5vw,1.5rem);margin-bottom:6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.profile-info .verified{color:#3b82f6;font-size:1.2rem}
+.profile-info .handle{color:var(--muted);font-size:1rem;margin-bottom:10px}
+.profile-info .bio{color:var(--muted);font-size:.9rem;margin-bottom:12px;line-height:1.6}
+.profile-stats{display:flex;gap:30px;flex-wrap:wrap;margin-bottom:14px}
+.profile-stats div{text-align:center}
+.profile-stats b{display:block;font-size:clamp(1.1rem,2vw,1.4rem);font-weight:700}
+.profile-stats span{color:var(--muted);font-size:.8rem}
+.profile-actions{display:flex;gap:10px;flex-wrap:wrap}
+.dl-profile-btn{padding:10px 20px;border-radius:12px;background:var(--grad1);color:#fff;border:none;font-family:inherit;font-weight:700;font-size:.9rem;cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.dl-profile-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(124,58,237,.4)}
+.tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tab-btn{padding:12px 24px;border-radius:12px;background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:inherit;font-weight:600;font-size:.95rem;cursor:pointer;transition:all .2s}
+.tab-btn:hover{border-color:var(--primary);color:var(--text)}
+.tab-btn.active{background:var(--grad1);color:#fff;border-color:transparent}
+.tab-btn:disabled{opacity:.5;cursor:not-allowed}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.media-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;aspect-ratio:9/16;background:var(--card);transition:transform .2s}
+.media-item:hover{transform:scale(1.04)}
+.media-item img,.media-item video{width:100%;height:100%;object-fit:cover}
+.media-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent 50%);display:flex;align-items:flex-end;padding:10px;opacity:0;transition:opacity .2s}
+.media-item:hover .overlay{opacity:1}
+.media-item .dl-btn{position:absolute;top:10px;left:10px;width:36px;height:36px;border-radius:10px;background:rgba(124,58,237,.9);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transition:opacity .2s}
+.media-item:hover .dl-btn{opacity:1}
+.loading{text-align:center;padding:40px;color:var(--muted)}
+.spin{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 12px}
+.features-section{max-width:1100px;margin:80px auto;padding:0 clamp(16px,3vw,20px)}
+.section-title{text-align:center;font-size:clamp(1.6rem,4vw,2.5rem);font-weight:900;margin-bottom:12px}
+.section-title .g{background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.section-sub{text-align:center;color:var(--muted);margin-bottom:40px;font-size:clamp(.95rem,1.5vw,1.1rem)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:30px}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:28px;transition:transform .3s,border-color .3s;opacity:0;transform:translateY(40px)}
+.feature-card.visible{opacity:1;transform:translateY(0)}
+.feature-card:hover{transform:translateY(-8px);border-color:var(--primary)}
+.feature-card .icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:18px;color:#fff}
+.feature-card:nth-child(1) .icon{background:var(--grad1)}
+.feature-card:nth-child(2) .icon{background:var(--grad4)}
+.feature-card:nth-child(3) .icon{background:var(--grad2)}
+.feature-card:nth-child(4) .icon{background:var(--grad3)}
+.feature-card:nth-child(5) .icon{background:var(--grad5)}
+.feature-card:nth-child(6) .icon{background:var(--grad6)}
+.feature-card h3{font-size:1.2rem;margin-bottom:10px}
+.feature-card p{color:var(--muted);font-size:.95rem;line-height:1.7}
+.gallery-section{max-width:1100px;margin:80px auto;padding:0 clamp(16px,3vw,20px)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:40px}
+.gallery-item{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;cursor:pointer;opacity:0;transform:translateY(50px);transition:opacity .7s,transform .7s}
+.gallery-item.visible{opacity:1;transform:translateY(0)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.1)}
+.gallery-item .gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,26,.95) 0%,rgba(10,10,26,.6) 40%,transparent 70%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;transition:background .3s}
+.gallery-item .gal-overlay h4{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+.gallery-item .gal-overlay p{font-size:.9rem;color:var(--muted);line-height:1.5}
+.gallery-item .gal-tag{position:absolute;top:16px;right:16px;padding:6px 14px;border-radius:10px;color:#fff;font-size:.75rem;font-weight:600;backdrop-filter:blur(4px)}
+.gallery-item:nth-child(1) .gal-tag{background:rgba(124,58,237,.85)}
+.gallery-item:nth-child(2) .gal-tag{background:rgba(236,72,153,.85)}
+.gallery-item:nth-child(3) .gal-tag{background:rgba(59,130,246,.85)}
+.gallery-item:nth-child(4) .gal-tag{background:rgba(16,185,129,.85)}
+.gallery-item:nth-child(5) .gal-tag{background:rgba(245,158,11,.85)}
+.gallery-item:nth-child(6) .gal-tag{background:rgba(6,182,212,.85)}
+.stats-section{max-width:1000px;margin:80px auto;padding:0 clamp(16px,3vw,20px)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:40px}
+.stat-card{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:36px 24px;opacity:0;transform:translateY(40px);transition:opacity .6s,transform .6s}
+.stat-card.visible{opacity:1;transform:translateY(0)}
+.stat-card .num{font-size:clamp(2.5rem,6vw,3.5rem);font-weight:900;background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card:nth-child(2) .num{background:var(--grad4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card:nth-child(3) .num{background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card:nth-child(4) .num{background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card .label{color:var(--muted);font-size:.95rem;margin-top:10px}
+.scroll-section{opacity:0;transform:translateY(50px);transition:opacity .8s,transform .8s}
+.scroll-section.visible{opacity:1;transform:translateY(0)}
+.marquee-section{overflow:hidden;padding:24px 0;margin-top:60px;background:linear-gradient(90deg,rgba(124,58,237,.1),rgba(59,130,246,.1),rgba(236,72,153,.1),rgba(16,185,129,.1),rgba(245,158,11,.1));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.marquee{display:flex;gap:40px;white-space:nowrap;animation:marquee 30s linear infinite}
+.marquee span{font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:700;display:flex;align-items:center;gap:10px}
+.marquee span::after{content:'✦';color:var(--accent)}
+.marquee span:nth-child(odd){color:var(--primary2)}
+.marquee span:nth-child(even){color:var(--secondary)}
+.marquee span:nth-child(3n){color:var(--success)}
+.marquee span:nth-child(4n){color:var(--warning)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.show{display:flex}
+.lightbox-content{max-width:90%;max-height:90%;border-radius:14px;overflow:hidden}
+.lightbox-content video,.lightbox-content img{max-width:100%;max-height:80vh;display:block}
+.lightbox-close{position:absolute;top:20px;left:20px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.6rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lightbox-dl{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);padding:14px 32px;border-radius:14px;background:var(--grad1);color:#fff;border:none;font-family:inherit;font-weight:700;cursor:pointer;font-size:1.05rem}
+footer{text-align:center;padding:clamp(30px,5vh,50px) clamp(16px,3vw,20px) 0;color:var(--muted);border-top:1px solid var(--border);position:relative;z-index:1;width:100%}
+footer b{background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+footer .footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+footer .footer-links a{color:var(--muted);text-decoration:none;font-size:clamp(.8rem,1.2vw,.9rem);transition:color .2s}
+footer .footer-links a:hover{color:var(--primary2)}
+@media(max-width:600px){header{padding:10px 14px}.brand{gap:8px}.nav-links{gap:6px}.nav-links .nav-btn{padding:5px 10px;font-size:.7rem}.ara-logo{padding:8px 18px;gap:10px;font-size:1.4rem}.ara-logo .ara-badge{font-size:.7rem;padding:3px 8px}.media-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}.profile-card{padding:20px;gap:16px}.profile-card img{width:80px;height:80px}.profile-stats{gap:18px}.gallery-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg-blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div></div>
+<header>
+  <a href="/" class="brand"><span class="dot"></span><b>agram</b></a>
+  <nav class="nav-links">
+    <a href="/" class="nav-btn">الرئيسية</a>
+    <a href="/guide" class="nav-btn">دليل الاستخدام</a>
+    <a href="/about" class="nav-btn">من نحن</a>
+    <a href="/contact" class="nav-btn">تواصل معنا</a>
+    <a href="/" class="ara-logo"><span class="ara-text">AŘA</span><span class="ara-badge">DL</span></a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <h1>حمّل من <span class="g">انستجرام</span> بسهولة</h1>
+  <p>أداة مجانية لتحميل فيديوهات انستجرام بدقة عالية - ريلز، ستوري، هايلايت، ومنشورات بدون علامة مائية</p>
+  <div class="search-box" id="searchBox">
+    <input type="text" id="searchInput" placeholder="اكتب اسم مستخدم أو رابط انستجرام..." onkeydown="if(event.key==='Enter')doSearch()">
+    <button id="searchBtn" onclick="doSearch()"><span class="btn-text">بحث</span><span class="btn-spinner"></span></button>
+  </div>
+  <p class="search-hint">مثال: cristiano أو https://instagram.com/reel/...</p>
+</section>
+
+<section id="resultsSection">
+  <div id="profileCard"></div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('posts',this)">منشورات</button>
+    <button class="tab-btn" onclick="switchTab('reels',this)">ريلز</button>
+    <button class="tab-btn" onclick="switchTab('stories',this)">ستوري</button>
+    <button class="tab-btn" onclick="switchTab('highlights',this)">هايلايت</button>
+  </div>
+  <div id="mediaGrid" class="media-grid"></div>
+</section>
+
+<section class="features-section">
+  <h2 class="section-title scroll-section">لماذا <span class="g">agram؟</span></h2>
+  <p class="section-sub scroll-section">كل ما تحتاجه لتحميل محتوى انستجرام في مكان واحد</p>
+  <div class="features-grid">
+    <div class="feature-card scroll-section"><div class="icon">⚡</div><h3>سرعة فائقة</h3><p>تحميل فوري للمحتوى بفضل نظام 6 APIs الاحتياطي اللي بيضمن استمرارية الخدمة 24/7</p></div>
+    <div class="feature-card scroll-section"><div class="icon">🔒</div><h3>آمن تماماً</h3><p>مفيش تسجيل دخول ولا حفظ بيانات. كل طلب بيتعامل بيه السيرفر كوسيط مؤقت</p></div>
+    <div class="feature-card scroll-section"><div class="icon">💎</div><h3>جودة عالية</h3><p>حمّل الفيديوهات والصور بأعلى جودة متاحة من انستجرام بدون أي علامة مائية</p></div>
+    <div class="feature-card scroll-section"><div class="icon">🎬</div><h3>كل المحتوى</h3><p>ريلز، ستوري، هايلايت، منشورات، وصور البروفايل - كله متاح للتحميل</p></div>
+    <div class="feature-card scroll-section"><div class="icon">🆓</div><h3>مجاني 100%</h3><p>مفيش رسوم ولا اشتراك ولا حدود. حمّل أي عدد من الفيديوهات بدون قيود</p></div>
+    <div class="feature-card scroll-section"><div class="icon">📱</div><h3>متوافق مع كل الأجهزة</h3><p>الموقع متجاوب 100% ويشتغل على الموبايل والتابلت والكمبيوتر بسهولة</p></div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <h2 class="section-title scroll-section">معرض <span class="g">المحتوى</span></h2>
+  <p class="section-sub scroll-section">شوف أمثلة من اللي تقدر تحمله - صور بتتحرك مع الاسكرول</p>
+  <div class="gallery-grid">
+    <div class="gallery-item scroll-section"><span class="gal-tag">ريلز</span><img src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=500" alt="ريلز" loading="lazy"><div class="gal-overlay"><h4>ريلز بدقة عالية</h4><p>حمّل فيديوهات الريلز بأعلى جودة متاحة بدون علامة مائية</p></div></div>
+    <div class="gallery-item scroll-section"><span class="gal-tag">ستوري</span><img src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=500" alt="ستوري" loading="lazy"><div class="gal-overlay"><h4>ستوري فوري</h4><p>حمّل الستوري قبل ما يختفي خلال 24 ساعة بكل سهولة</p></div></div>
+    <div class="gallery-item scroll-section"><span class="gal-tag">هايلايت</span><img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=500" alt="هايلايت" loading="lazy"><div class="gal-overlay"><h4>هايلايت كامل</h4><p>حمّل كل الفيديوهات والصور من مجموعات الهايلايت المحفوظة</p></div></div>
+    <div class="gallery-item scroll-section"><span class="gal-tag">منشورات</span><img src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=500" alt="منشورات" loading="lazy"><div class="gal-overlay"><h4>منشورات متنوعة</h4><p>صور وفيديوهات المنشورات بدقة عالية وبضغطة واحدة</p></div></div>
+    <div class="gallery-item scroll-section"><span class="gal-tag">بروفايل</span><img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=500" alt="بروفايل" loading="lazy"><div class="gal-overlay"><h4>صور البروفايل</h4><p>حمّل صورة البروفايل بأعلى دقة متاحة بضغطة واحدة</p></div></div>
+    <div class="gallery-item scroll-section"><span class="gal-tag">مجاني</span><img src="https://images.pexels.com/photos/2693208/pexels-photo-2693208.jpeg?auto=compress&cs=tinysrgb&w=500" alt="مجاني" loading="lazy"><div class="gal-overlay"><h4>مجاني تماماً</h4><p>كل ده مجاني 100% بدون أي رسوم أو حدود أو تسجيل دخول</p></div></div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <h2 class="section-title scroll-section">agram <span class="g">بالأرقام</span></h2>
+  <div class="stats-grid">
+    <div class="stat-card scroll-section"><div class="num" data-target="6">0</div><div class="label">APIs احتياطية</div></div>
+    <div class="stat-card scroll-section"><div class="num" data-target="100" data-suffix="%">0</div><div class="label">مجاني</div></div>
+    <div class="stat-card scroll-section"><div class="num" data-target="24" data-suffix="h">0</div><div class="label">متاح دائماً</div></div>
+    <div class="stat-card scroll-section"><div class="num">∞</div><div class="label">تحميلات بلا حدود</div></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-links"><a href="/">الرئيسية</a><a href="/about">من نحن</a><a href="/contact">تواصل معنا</a><a href="/privacy">سياسة الخصوصية</a><a href="/terms">الشروط والأحكام</a><a href="/faq">الأسئلة الشائعة</a></div>
+  <p>صُنع بكل احتراف · <b>agram</b> × <span style="font-family:'Space Grotesk',monospace">AŘA_downloader</span></p>
+</footer>
+
+<section class="marquee-section">
+  <div class="marquee">
+    <span>تحميل مجاني</span><span>بدون علامة مائية</span><span>ريلز بدقة عالية</span><span>ستوري وهايلايت</span><span>سريع وآمن</span><span>6 APIs احتياطية</span>
+    <span>تحميل مجاني</span><span>بدون علامة مائية</span><span>ريلز بدقة عالية</span><span>ستوري وهايلايت</span><span>سريع وآمن</span><span>6 APIs احتياطية</span>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+  <button class="lightbox-dl" id="lightboxDl">تحميل</button>
+</div>
+
+<script>
+let currentUsername='';
+let currentTab='posts';
+let isSearching=false;
+function escH(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function fmtNum(n){n=Number(n||0);if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return n;}
+function setSearching(loading){
+  isSearching=loading;
+  const box=document.getElementById('searchBox');
+  const btn=document.getElementById('searchBtn');
+  const input=document.getElementById('searchInput');
+  if(loading){box.classList.add('loading');btn.classList.add('loading');btn.disabled=true;input.disabled=true;}
+  else{box.classList.remove('loading');btn.classList.remove('loading');btn.disabled=false;input.disabled=false;input.focus();}
+}
+function doSearch(){
+  if(isSearching)return;
+  const q=document.getElementById('searchInput').value.trim();
+  if(!q)return;
+  setSearching(true);
+  const grid=document.getElementById('mediaGrid');
+  grid.innerHTML='<div class="loading"><div class="spin"></div>جاري البحث...</div>';
+  document.getElementById('resultsSection').classList.add('show');
+  document.getElementById('profileCard').innerHTML='';
+  fetch('/api/search?q='+encodeURIComponent(q)).then(r=>r.json()).then(d=>{
+    if(!d.ok){grid.innerHTML='<div class="loading">'+escH(d.error||'لا توجد نتائج')+'</div>';return;}
+    const data=d.data;
+    if(data.profile){currentUsername=data.profile.username;renderProfile(data.profile);}else{currentUsername='';document.getElementById('profileCard').innerHTML='';}
+    currentTab='posts';document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',i===0));
+    renderMedia(data.media||[],'posts');
+  }).catch(()=>{grid.innerHTML='<div class="loading">حدث خطأ. حاول مرة أخرى.</div>';}).finally(()=>{setSearching(false);});
+}
+function renderProfile(p){
+  document.getElementById('profileCard').innerHTML='<div class="profile-card"><img src="'+escH(p.profile_pic)+'" alt="'+escH(p.username)+'" onerror="this.src=\'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=200\'"><div class="profile-info"><h3>'+escH(p.full_name||p.username)+' '+(p.is_verified?'<span class="verified">✔</span>':'')+'</h3><div class="handle">@'+escH(p.username)+'</div>'+(p.biography?'<div class="bio">'+escH(p.biography)+'</div>':'')+'<div class="profile-stats"><div><b>'+fmtNum(p.followers)+'</b><span>متابع</span></div><div><b>'+fmtNum(p.following)+'</b><span>يتابع</span></div><div><b>'+fmtNum(p.post_count)+'</b><span>منشور</span></div></div><div class="profile-actions"><a class="dl-profile-btn" href="/download?url='+encodeURIComponent(p.profile_pic)+'&tab=profile" target="_blank">⬇ تحميل صورة البروفايل</a></div></div></div>';
+}
+function switchTab(tab,btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  currentTab=tab;
+  if(!currentUsername){return;}
+  const grid=document.getElementById('mediaGrid');
+  grid.innerHTML='<div class="loading"><div class="spin"></div>جاري التحميل...</div>';
+  fetch('/api/content?username='+encodeURIComponent(currentUsername)+'&tab='+tab).then(r=>r.json()).then(d=>{
+    if(!d.ok){grid.innerHTML='<div class="loading">'+escH(d.error||'لا يوجد محتوى')+'</div>';return;}
+    renderMedia(d.data.media,tab);
+  }).catch(()=>{grid.innerHTML='<div class="loading">حدث خطأ.</div>';});
+}
+function renderMedia(media,tab){
+  const grid=document.getElementById('mediaGrid');
+  if(!media||media.length===0){grid.innerHTML='<div class="loading">لا يوجد محتوى متاح</div>';return;}
+  grid.innerHTML=media.map((m,i)=>{
+    const isVid=m.type==='video';
+    const thumb=m.thumb||m.url;
+    return '<div class="media-item" onclick="openLightbox(\''+escH(m.url)+'\',\''+isVid+'\',\''+escH(thumb)+'\')"><img src="'+escH(thumb)+'" alt="media" loading="lazy" onerror="this.style.display=\'none\'">'+(isVid?'<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:2.5rem;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)">▶</div>':'')+'<button class="dl-btn" onclick="event.stopPropagation();downloadMedia(\''+escH(m.url)+'\',\''+tab+'\')" title="تحميل">⬇</button><div class="overlay"><div style="color:#fff;font-size:.8rem">'+(isVid?'فيديو':'صورة')+'</div></div></div>';
+  }).join('');
+}
+function downloadMedia(url,tab){window.open('/download?url='+encodeURIComponent(url)+'&tab='+tab);}
+function openLightbox(url,isVid,thumb){
+  const lb=document.getElementById('lightbox');
+  const c=document.getElementById('lightboxContent');
+  const dl=document.getElementById('lightboxDl');
+  if(isVid==='true'){c.innerHTML='<video src="'+url+'" controls autoplay style="max-width:100%;max-height:80vh;border-radius:14px">';}
+  else{c.innerHTML='<img src="'+url+'" style="max-width:100%;max-height:80vh;border-radius:14px">';}
+  dl.onclick=(e)=>{e.stopPropagation();downloadMedia(url,currentTab);};
+  lb.classList.add('show');
+}
+function closeLightbox(e){if(e.target===e.currentTarget||e.target.classList.contains('lightbox-close')){document.getElementById('lightbox').classList.remove('show');document.getElementById('lightboxContent').innerHTML='';}}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox({target:document.getElementById('lightbox'),currentTarget:document.getElementById('lightbox')});});
+
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');if(e.target.querySelector('.num[data-target]')){const nums=e.target.querySelectorAll('[data-target]');nums.forEach(n=>animateNum(n));}}});},{threshold:0.15});
+document.querySelectorAll('.scroll-section').forEach(s=>observer.observe(s));
+function animateNum(el){const t=parseInt(el.dataset.target);const s=el.dataset.suffix||'';let c=0;const step=t/40;const iv=setInterval(()=>{c+=step;if(c>=t){c=t;clearInterval(iv);}el.textContent=Math.floor(c)+s;},30);}
+</script>
+</body>
+</html>
