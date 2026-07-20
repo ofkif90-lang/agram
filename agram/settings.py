@@ -6,8 +6,9 @@ import os
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
 DEBUG = False
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = [
+    "agram-production.up.railway.app",
+]
 INSTALLED_APPS = ["django.contrib.staticfiles",
                    "django.contrib.contenttypes", 
                   "django.contrib.auth",
