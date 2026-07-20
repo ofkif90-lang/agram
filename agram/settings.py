@@ -8,7 +8,12 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
 DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
-INSTALLED_APPS = ["django.contrib.staticfiles", "django.contrib.contenttypes", "django.contrib.auth", "downloader",'django.contrib.sitemaps',]
+INSTALLED_APPS = ["django.contrib.staticfiles",
+                   "django.contrib.contenttypes", 
+                  "django.contrib.auth",
+                    "downloader",
+                    'django.contrib.sitemaps',
+                    ]
 MIDDLEWARE = ["agram.middleware.SecurityHeadersMiddleware",
                   'whitenoise.middleware.WhiteNoiseMiddleware',
 ]

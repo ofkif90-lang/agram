@@ -7,51 +7,9 @@ from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
 
-
-
-def sitemap_xml(request):
-    xml = """<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://agram-production.up.railway.app/</loc>
-</url>
-
-<url>
-<loc>https://agram-production.up.railway.app/guide</loc>
-</url>
-
-<url>
-<loc>https://agram-production.up.railway.app/about</loc>
-</url>
-
-<url>
-<loc>https://agram-production.up.railway.app/contact</loc>
-</url>
-
-<url>
-<loc>https://agram-production.up.railway.app/privacy</loc>
-</url>
-
-<url>
-<loc>https://agram-production.up.railway.app/terms</loc>
-</url>
-
-<url>
-<loc>https://agram-production.up.railway.app/faq</loc>
-</url>
-
-</urlset>"""
-
-    return HttpResponse(xml, content_type="text/xml")
-
-
-
-
 sitemaps = {
     "static": StaticViewSitemap,
 }
-
 
 def robots_txt(request):
     return HttpResponse(
@@ -71,7 +29,6 @@ path(
     "sitemap.xml",
     sitemap,
     {"sitemaps": sitemaps},
-    name="django.contrib.sitemaps.views.sitemap",
 ),
 
 
@@ -80,7 +37,6 @@ path(
     path("robots.txt", robots_txt),
     # path("sitemap.xml", sitemap, {"sitemaps": sitemaps}),
 
-    path("sitemap.xml", sitemap_xml),
 
 
 
