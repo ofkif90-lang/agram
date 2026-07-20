@@ -1,5 +1,6 @@
 from django.urls import path
 from django.views.generic import RedirectView
+from django.http import HttpResponse
 from downloader import views
 
 favicon_view = RedirectView.as_view(url="/static/favicon.svg", permanent=True)
@@ -17,4 +18,12 @@ urlpatterns = [
     path("api/status", views.api_status, name="api_status"),
     path("download", views.download_proxy, name="download"),
     path("favicon.ico", favicon_view),
+
+    path(
+    "google55e2cfdb79c0b019.html",
+    lambda request: HttpResponse(
+        "google-site-verification: google55e2cfdb79c0b019.html",
+        content_type="text/html",
+    ),
+),
 ]
