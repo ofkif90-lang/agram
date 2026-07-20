@@ -2,8 +2,10 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = "agram-dev-secret-key-change-in-production-2024"
-DEBUG = True
+import os
+
+SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
+DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = ["django.contrib.staticfiles", "django.contrib.contenttypes", "django.contrib.auth", "downloader"]
@@ -35,3 +37,8 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
