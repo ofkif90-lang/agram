@@ -1,17 +1,14 @@
 from django.urls import path
 from django.views.generic import RedirectView
 from django.http import HttpResponse
+from django.contrib.sitemaps import views as sitemap_views
 
 from downloader import views
-
-from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
-
 
 sitemaps = {
     "static": StaticViewSitemap,
 }
-
 
 def robots_txt(request):
     return HttpResponse(
@@ -23,23 +20,23 @@ Sitemap: https://agram-production.up.railway.app/sitemap.xml
         content_type="text/plain"
     )
 
+# تعديل هنا: عملنا view مخصص للـ sitemap.xml
+def sitemap_xml(request):
+    response = sitemap_views.sitemap(request, {"sitemaps": sitemaps})
+    response["Content-Type"] = "application/xml"
+    # شيل الـ x-robots-tag لو بيتضاف تلقائيًا
+    if "X-Robots-Tag" in response:
+        del response["X-Robots-Tag"]
+    return response
 
 favicon_view = RedirectView.as_view(
     url="/static/favicon.svg",
     permanent=True
 )
 
-
 urlpatterns = [
-
-    path(
-        "sitemap.xml",
-        sitemap,
-        {"sitemaps": sitemaps},
-    ),
-
+    path("sitemap.xml", sitemap_xml),   # استخدمنا الـ view الجديد هنا
     path("robots.txt", robots_txt),
-
     path("test/", lambda request: HttpResponse("WORKING")),
 
     path("", views.index, name="index"),
