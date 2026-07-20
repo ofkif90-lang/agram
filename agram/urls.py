@@ -2,9 +2,24 @@ from django.urls import path
 from django.views.generic import RedirectView
 from django.http import HttpResponse
 from downloader import views
+from django.urls import path, include
 
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
+
+print("LOADED AGRAM URLS")
+
+
+
+def robots_txt(request):
+    return HttpResponse(
+        """User-agent: *
+Allow: /
+
+Sitemap: https://agram-production.up.railway.app/sitemap.xml
+""",
+        content_type="text/plain"
+    )
 
 sitemaps = {
     "static": StaticViewSitemap,
@@ -23,7 +38,17 @@ path(
 ),
 
 
-    
+
+
+ path("test/", lambda request: HttpResponse("WORKING")),
+    path("robots.txt", robots_txt),
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}),
+
+
+
+
+
+
     path("", views.index, name="index"),
     path("guide", views.guide, name="guide"),
     path("about", views.about, name="about"),
