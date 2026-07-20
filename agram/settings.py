@@ -20,6 +20,7 @@ MIDDLEWARE = ["agram.middleware.SecurityHeadersMiddleware",
                          
                      "agram.middleware.RobotsTagMiddleware",                  ]
 
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "agram-production.up.railway.app"]
 
 
 
