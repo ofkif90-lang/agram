@@ -10,7 +10,7 @@ ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = ["django.contrib.staticfiles", "django.contrib.contenttypes", "django.contrib.auth", "downloader"]
 MIDDLEWARE = ["agram.middleware.SecurityHeadersMiddleware",
-                  'whitenoise.middleware.WhiteNoiseMiddleware',
+                  'whitenoise.middleware.WhiteNoiseMiddleware','django.contrib.sitemaps',
 ]
 ROOT_URLCONF = "agram.urls"
 WSGI_APPLICATION = "agram.wsgi.application"

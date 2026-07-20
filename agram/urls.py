@@ -3,9 +3,28 @@ from django.views.generic import RedirectView
 from django.http import HttpResponse
 from downloader import views
 
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+
+sitemaps = {
+    "static": StaticViewSitemap,
+}
+
+
+
 favicon_view = RedirectView.as_view(url="/static/favicon.svg", permanent=True)
 
 urlpatterns = [
+
+path(
+    "sitemap.xml",
+    sitemap,
+    {"sitemaps": sitemaps},
+    name="django.contrib.sitemaps.views.sitemap",
+),
+
+
+    
     path("", views.index, name="index"),
     path("guide", views.guide, name="guide"),
     path("about", views.about, name="about"),
@@ -26,4 +45,15 @@ urlpatterns = [
         content_type="text/html",
     ),
 ),
-]
+
+
+
+
+                            ]
+
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+
+sitemaps = {
+    "static": StaticViewSitemap,
+}
