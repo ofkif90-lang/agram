@@ -68,3 +68,15 @@ class SecurityHeadersMiddleware:
                 "frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
             )
         return response
+
+# myproject/middleware.py
+class RemoveRobotsTagMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        # لو الملف sitemap.xml أو نوعه XML
+        if request.path.endswith("sitemap.xml") or response.get("Content-Type") == "application/xml":
+            response["X-Robots-Tag"] = "all"  # أو تشيله نهائيًا
+        return response

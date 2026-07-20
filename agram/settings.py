@@ -17,7 +17,12 @@ INSTALLED_APPS = ["django.contrib.staticfiles",
                     ]
 MIDDLEWARE = ["agram.middleware.SecurityHeadersMiddleware",
                   'whitenoise.middleware.WhiteNoiseMiddleware',
-]
+                         
+                         "agram.middleware.RemoveRobotsTagMiddleware",                  ]
+
+
+
+
 ROOT_URLCONF = "agram.urls"
 WSGI_APPLICATION = "agram.wsgi.application"
 
