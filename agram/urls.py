@@ -11,7 +11,6 @@ sitemaps = {
 }
 
 
-
 favicon_view = RedirectView.as_view(url="/static/favicon.svg", permanent=True)
 
 urlpatterns = [
@@ -49,11 +48,4 @@ path(
 
 
 
-                            ]
-
-from django.contrib.sitemaps.views import sitemap
-from .sitemaps import StaticViewSitemap
-
-sitemaps = {
-    "static": StaticViewSitemap,
-}
+   ]
