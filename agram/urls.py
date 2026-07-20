@@ -7,8 +7,51 @@ from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
 
-print("LOADED AGRAM URLS")
 
+
+def sitemap_xml(request):
+    xml = """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+<loc>https://agram-production.up.railway.app/</loc>
+</url>
+
+<url>
+<loc>https://agram-production.up.railway.app/guide</loc>
+</url>
+
+<url>
+<loc>https://agram-production.up.railway.app/about</loc>
+</url>
+
+<url>
+<loc>https://agram-production.up.railway.app/contact</loc>
+</url>
+
+<url>
+<loc>https://agram-production.up.railway.app/privacy</loc>
+</url>
+
+<url>
+<loc>https://agram-production.up.railway.app/terms</loc>
+</url>
+
+<url>
+<loc>https://agram-production.up.railway.app/faq</loc>
+</url>
+
+</urlset>"""
+
+    return HttpResponse(xml, content_type="application/xml")
+
+
+
+
+
+sitemaps = {
+    "static": StaticViewSitemap,
+}
 
 
 def robots_txt(request):
@@ -21,15 +64,10 @@ Sitemap: https://agram-production.up.railway.app/sitemap.xml
         content_type="text/plain"
     )
 
-sitemaps = {
-    "static": StaticViewSitemap,
-}
-
 
 favicon_view = RedirectView.as_view(url="/static/favicon.svg", permanent=True)
 
 urlpatterns = [
-
 path(
     "sitemap.xml",
     sitemap,
@@ -39,12 +77,11 @@ path(
 
 
 
-
  path("test/", lambda request: HttpResponse("WORKING")),
     path("robots.txt", robots_txt),
-    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}),
+    # path("sitemap.xml", sitemap, {"sitemaps": sitemaps}),
 
-
+    path("sitemap.xml", sitemap_xml),
 
 
 
@@ -74,3 +111,9 @@ path(
 
 
    ]
+
+
+
+
+from django.http import HttpResponse
+
