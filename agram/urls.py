@@ -57,4 +57,16 @@ urlpatterns = [
     path("privacy", views.privacy, name="privacy"),
     path("terms", views.terms, name="terms"),
     path("faq", views.faq, name="faq"),
+
+ path(
+        "google55e2cfdb79c0b019.html",
+        lambda request: HttpResponse(
+            "google-site-verification: google55e2cfdb79c0b019.html",
+            content_type="text/html",
+        ),
+    ),
+
+
+
+
 ]
