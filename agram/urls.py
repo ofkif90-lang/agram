@@ -61,7 +61,6 @@ urlpatterns = [
     path("faq", views.faq, name="faq"),
 
 
-
 path("api/search", views.api_search, name="api_search"),
     path("api/content", views.api_content, name="api_content"),
     path("api/status", views.api_status, name="api_status"),
