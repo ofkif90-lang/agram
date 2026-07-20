@@ -18,7 +18,7 @@ INSTALLED_APPS = ["django.contrib.staticfiles",
 MIDDLEWARE = ["agram.middleware.SecurityHeadersMiddleware",
                   'whitenoise.middleware.WhiteNoiseMiddleware',
                          
-                         "agram.middleware.RemoveRobotsTagMiddleware",                  ]
+                     "agram.middleware.RobotsTagMiddleware",                  ]
 
 
 

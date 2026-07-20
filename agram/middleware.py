@@ -69,14 +69,15 @@ class SecurityHeadersMiddleware:
             )
         return response
 
-# myproject/middleware.py
-class RemoveRobotsTagMiddleware:
+# agram/middleware.py
+
+class RobotsTagMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
 
     def __call__(self, request):
         response = self.get_response(request)
-        # لو الملف sitemap.xml أو نوعه XML
-        if request.path.endswith("sitemap.xml") or response.get("Content-Type") == "application/xml":
-            response["X-Robots-Tag"] = "all"  # أو تشيله نهائيًا
+        # لو الطلب خاص بالـ sitemap.xml
+        if request.path.endswith("sitemap.xml"):
+            response["X-Robots-Tag"] = "all"  # غيّر القيمة
         return response
