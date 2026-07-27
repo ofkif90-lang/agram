@@ -80,6 +80,10 @@ path("api/search", views.api_search, name="api_search"),
     ),
 
 
-
+path(
+    "sw.js",
+    RedirectView.as_view(url="/static/sw.js", permanent=False),
+    name="service_worker",
+),
 
 ]
